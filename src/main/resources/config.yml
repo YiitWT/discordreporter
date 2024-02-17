@@ -1,0 +1,18 @@
+webhook:
+  # Chat-log Webhook
+  chatHook: "urlhere"
+  # Quit-log Webhook
+  quitHook: "urlhere"
+  # Join-log Webhook
+  joinHook: "urlhere"
+lang:
+  en:
+    cords: "Coordinates"
+    worldName: "World Name"
+    quitDate: "Quit Date"
+    logoutMsg: " logged out from the server"
+    loginMsg: " logged in to the server"
+    loginDate: "Login Date"
+    hp: "Health"
+
+

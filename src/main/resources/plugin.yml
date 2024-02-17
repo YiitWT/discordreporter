@@ -1,0 +1,8 @@
+name: DiscordReporter
+version: '${project.version}'
+main: com.yiitwt.discordreporter.DiscordReporter
+api-version: '1.20'
+prefix: DiscordReporter
+authors: [YiitWT]
+description: A lightweight Discord log plugin to keep your server safe and moderated.
+website: https://discord.gg/qkaMdrQpyQ
