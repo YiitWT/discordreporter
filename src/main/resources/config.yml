@@ -1,10 +1,14 @@
 webhook:
   # Chat-log Webhook
-  chatHook: "urlhere"
+  chatHook: "https://discord.com/api/webhooks/1210939991413497959/F3qLEF2FH0B10eMH6A3l2ixUqjz3xQ2BxfDYCs5i-FPdtSa4vaoik95cFYgK8qu_dp0p"
   # Quit-log Webhook
-  quitHook: "urlhere"
+  quitHook: "https://discord.com/api/webhooks/1210939991413497959/F3qLEF2FH0B10eMH6A3l2ixUqjz3xQ2BxfDYCs5i-FPdtSa4vaoik95cFYgK8qu_dp0p"
   # Join-log Webhook
-  joinHook: "urlhere"
+  joinHook: "https://discord.com/api/webhooks/1210939991413497959/F3qLEF2FH0B10eMH6A3l2ixUqjz3xQ2BxfDYCs5i-FPdtSa4vaoik95cFYgK8qu_dp0p"
+  # Death-log Webhook
+  deathHook: "https://discord.com/api/webhooks/1210939991413497959/F3qLEF2FH0B10eMH6A3l2ixUqjz3xQ2BxfDYCs5i-FPdtSa4vaoik95cFYgK8qu_dp0p"
+  # Command-log Webhook
+  commandHook: "https://discord.com/api/webhooks/1210939991413497959/F3qLEF2FH0B10eMH6A3l2ixUqjz3xQ2BxfDYCs5i-FPdtSa4vaoik95cFYgK8qu_dp0p"
 lang:
   en:
     cords: "Coordinates"
