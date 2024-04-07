@@ -6,6 +6,7 @@ import club.minnced.discord.webhook.send.WebhookEmbed;
 import club.minnced.discord.webhook.send.WebhookEmbedBuilder;
 import com.yiitwt.discordreporter.DiscordReporter;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -33,9 +34,8 @@ public class JoinHandler implements Listener {
         String formattedDate = dateFormat.format(new Date());
         String healthString = String.valueOf(Math.floor(player.getHealth()));
         String pingString = String.valueOf(Math.floor(player.getPing()));
-        String saturationString = String.valueOf(Math.floor(player.getSaturation()));
         FileConfiguration config = plugin.getConfig();
-        String url =  config.getString("webhook.joinHook");
+        String url = config.getString("webhook.joinHook");
         WebhookClient client = new WebhookClientBuilder(url).build();
 
 
@@ -48,9 +48,9 @@ public class JoinHandler implements Listener {
                     .addField(new WebhookEmbed.EmbedField(true,  config.getString("lang.en.loginDate"), formattedDate))
                     .addField(new WebhookEmbed.EmbedField(false, "IP Address", ip))
                     .addField(new WebhookEmbed.EmbedField(true,  config.getString("lang.en.hp"), healthString))
-                    .addField(new WebhookEmbed.EmbedField(true, "Ping", pingString))
-                    .setFooter(new WebhookEmbed.EmbedFooter("Buy premium version at https://yiitwt.com", "https://i.imgur.com/E5vlyvo.png"))
-                    .setAuthor(new WebhookEmbed.EmbedAuthor("Made by YiitWT with <3", "https://mc-heads.net/avatar/"+player.getName(), "https://yiitwt.com"))
+                   // .addField(new WebhookEmbed.EmbedField(true, "Ping", pingString))
+                   // .setFooter(new WebhookEmbed.EmbedFooter("Buy premium version at https://yiitwt.com", "https://i.imgur.com/E5vlyvo.png"))
+                   // .setAuthor(new WebhookEmbed.EmbedAuthor("Made by YiitWT with <3", "https://mc-heads.net/avatar/"+player.getName(), "https://yiitwt.com"))
                     .setTimestamp(new Date().toInstant())
                     .build();
 
@@ -60,7 +60,7 @@ public class JoinHandler implements Listener {
                 System.out.printf("Embed sent: %s%n", message.getId());
             });
         } catch (Exception e) {
-            e.printStackTrace();
+            plugin.getServer().getConsoleSender().sendMessage(ChatColor.DARK_BLUE + "[DiscordReporter] " +ChatColor.DARK_RED + "Unable to send embed, please check your config or join our discord server.");
         } finally {
             client.close();
         }

@@ -38,9 +38,7 @@ public class ChatHandler implements Listener {
             client.send(mBuilder.build()).thenAccept((message) -> {
                 System.out.printf("Message sent: %s%n", message.getId());
             });
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
+        }  finally {
             client.close();
         }
 
