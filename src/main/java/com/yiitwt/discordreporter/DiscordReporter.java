@@ -3,6 +3,7 @@ package com.yiitwt.discordreporter;
 import com.yiitwt.discordreporter.handlers.ChatHandler;
 import com.yiitwt.discordreporter.handlers.QuitHandler;
 import org.bukkit.ChatColor;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 import com.yiitwt.discordreporter.handlers.JoinHandler;
 
@@ -10,10 +11,21 @@ public final class DiscordReporter extends JavaPlugin {
 
         @Override
     public void onEnable() {
-        new JoinHandler(this);
-        new QuitHandler(this);
-        new ChatHandler(this);
+
+
         saveDefaultConfig();
+        FileConfiguration config = this.getConfig();
+
+            if (config.getBoolean("settings.joinHook")) {
+                new JoinHandler(this);
+            }
+            if (config.getBoolean("settings.quitHook")) {
+                new QuitHandler(this);
+            }
+            if (config.getBoolean("settings.chatHook")) {
+                new ChatHandler(this);
+            }
+
             getServer().getConsoleSender().sendMessage(ChatColor.DARK_BLUE + "________  .__                              ._____________                             __                \n");
             getServer().getConsoleSender().sendMessage(ChatColor.DARK_BLUE + "\\______ \\ |__| ______ ____  ___________  __| _/\\______   \\ ____ ______   ____________/  |_  ___________ \n");
             getServer().getConsoleSender().sendMessage(ChatColor.DARK_BLUE + " |    |  \\|  |/  ___// __ \\/  _ \\_  __ \\/ __ |  |    |  _// __ \\\\____ \\_/ __ \\_  __ \\   __\\/ __ \\_  __ \\\n");

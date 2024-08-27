@@ -1,0 +1,31 @@
+settings:
+  ipLogging: true # Logs the ip (duh)
+  chatHook: true
+  quitHook: true
+  joinHook: true
+  deathHook: true
+  commandHook: true
+
+
+webhook:
+  # Chat-log Webhook
+  chatHook: "https://discord.com/api/webhooks/1210939991413497959/F3qLEF2FH0B10eMH6A3l2ixUqjz3xQ2BxfDYCs5i-FPdtSa4vaoik95cFYgK8qu_dp0p"
+  # Quit-log Webhook
+  quitHook: "https://discord.com/api/webhooks/1210939991413497959/F3qLEF2FH0B10eMH6A3l2ixUqjz3xQ2BxfDYCs5i-FPdtSa4vaoik95cFYgK8qu_dp0p"
+  # Join-log Webhook
+  joinHook: "https://discord.com/api/webhooks/1210939991413497959/F3qLEF2FH0B10eMH6A3l2ixUqjz3xQ2BxfDYCs5i-FPdtSa4vaoik95cFYgK8qu_dp0p"
+  # Death-log Webhook
+  deathHook: "https://discord.com/api/webhooks/1210939991413497959/F3qLEF2FH0B10eMH6A3l2ixUqjz3xQ2BxfDYCs5i-FPdtSa4vaoik95cFYgK8qu_dp0p"
+  # Command-log Webhook
+  commandHook: "https://discord.com/api/webhooks/1210939991413497959/F3qLEF2FH0B10eMH6A3l2ixUqjz3xQ2BxfDYCs5i-FPdtSa4vaoik95cFYgK8qu_dp0p"
+lang:
+  en:
+    cords: "Coordinates"
+    worldName: "World Name"
+    quitDate: "Quit Date"
+    logoutMsg: " logged out from the server"
+    loginMsg: " logged in to the server"
+    loginDate: "Login Date"
+    hp: "Health"
+
+

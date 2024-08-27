@@ -1,0 +1,5 @@
+com\yiitwt\discordreporter\handlers\UpdateChacker.class
+com\yiitwt\discordreporter\DiscordReporter.class
+com\yiitwt\discordreporter\handlers\JoinHandler.class
+com\yiitwt\discordreporter\handlers\QuitHandler.class
+com\yiitwt\discordreporter\handlers\ChatHandler.class

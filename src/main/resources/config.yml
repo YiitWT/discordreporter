@@ -1,3 +1,12 @@
+settings:
+  ipLogging: true # Logs the ip (duh)
+  chatHook: true
+  quitHook: true
+  joinHook: true
+  deathHook: true
+  commandHook: true
+
+
 webhook:
   # Chat-log Webhook
   chatHook: "https://discord.com/api/webhooks/1210939991413497959/F3qLEF2FH0B10eMH6A3l2ixUqjz3xQ2BxfDYCs5i-FPdtSa4vaoik95cFYgK8qu_dp0p"

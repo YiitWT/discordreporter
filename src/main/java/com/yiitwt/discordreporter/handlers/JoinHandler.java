@@ -29,13 +29,15 @@ public class JoinHandler implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
-        String ip = player.getAddress().getAddress().getHostAddress();
+        String ip = "Hidden";
+
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         String formattedDate = dateFormat.format(new Date());
         String healthString = String.valueOf(Math.floor(player.getHealth()));
         String pingString = String.valueOf(Math.floor(player.getPing()));
         FileConfiguration config = plugin.getConfig();
         String url = config.getString("webhook.joinHook");
+
         WebhookClient client = new WebhookClientBuilder(url).build();
 
 
