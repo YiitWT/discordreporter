@@ -7,6 +7,8 @@
   <h3 align="center">DiscordReporter</h3>
 
   <p align="center">
+    # This project is no longer maintained by the **ORIGINAL** developer. (YiitWT)
+    You can pull request and fix bugs etc. i will be adding those.
     A lightweight Discord-logger plugin to keep your server safe and moderated.
     <br/>
     <br/>
